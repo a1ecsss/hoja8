@@ -12,7 +12,7 @@ public class Paciente implements Comparable<Paciente> {
     public String getNombre() { 
         return nombre; 
     }
-
+    
     public String getSintoma() { 
         return sintoma; 
     }
@@ -28,5 +28,10 @@ public class Paciente implements Comparable<Paciente> {
     @Override
     public int compareTo(Paciente otro) {
         return Character.compare(this.codigoEmergencia, otro.codigoEmergencia);
+    }
+
+    @Override
+    public String toString() {
+        return nombre + ", " + sintoma + ", " + codigoEmergencia;
     }
 }
